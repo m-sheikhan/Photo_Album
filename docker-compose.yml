@@ -1,0 +1,18 @@
+version: "3"
+services:
+       photoalbum:
+           container_name: photoalbum
+           image: photoalbum
+           restart: always
+           build: .
+           ports:
+             - "3300:3300"
+           links:
+             - mongo
+       mongo:
+             container_name: mongo
+             image: mongo
+             volumes:
+               - ./data:/data/db
+             ports:
+               - '27018:27017'
