@@ -6,6 +6,7 @@ This is a public Photo Album that each user can:
  - Like a photo
  - Write comment for a Photo
  - See statistics of views, likes and comments for each photo and overall
+ 
 You can also make a Docker image for you. Before making a Docker image, please note to the following hints:
 - Dockerfile is included and can be used for image creation
 - please rename the dockerignorefile to .dockerignorefile
