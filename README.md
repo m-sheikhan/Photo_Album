@@ -13,16 +13,16 @@ Project files are also organized based on MVC:
   Model: “models” folder consist of files needed for Data Model:
 - Index.js says that our data model has two schema: image and comment
 - Image.js is schema for image info and comment.js is schema for a user comment. This schema has a virtual property, image that specifies the image which this comment is written for it.
-View:  The “view”folder contains all templates providing View of project and show photos and info to user. It has a layout subfolder has main.handlebars which is the main layout for Web page. It has a sidebar in which statistics, popular images and comments are inserted. The {{body}} part is where one of two other handlebars inserted:
+View:  The “view” folder contains all templates providing View of project and show photos and info to user. It has a layout subfolder with main.handlebars which is the main layout for Web page. It has a sidebar in which statistics, popular images and comments are inserted. The {{body}} part is where one of two other handlebars inserted:
 
 - Index handlebar used for uploading an image and shows the latest images at the bottom.
 - Image handlebar shows an image and its statistics. The user can write and post a comment for that image. Previous comments for that image are displayed in the lower part.
-In partial folder, there are handlebars for sidebar display. Stats shows the statistics. Popular dge.js displays thumbnails of photos with most likes and comments shows the latest comments.
+- In partial folder, there are handlebars for sidebar display. Stats shows the statistics. Popular dge.js displays thumbnails of photos with most likes and comments shows the latest comments.
 Control: Control is like a glue and relates View to Data Model. 
 In “controllers” folder, two files exist:
 -Home.js is used to fetch newest photos from database and used for home page.
 -Image.js includes functions used for each image such as fetching an image from database, saving a new image to database, managing likes and comments for an image and deleting an image from database.
-In “helpers’ folder, there are JavaScripts to handle data displayed on sidebar.
+- In “helpers’ folder, there are JavaScripts to handle data displayed on sidebar.
 In “server” folder:
 -configure.js includes all required settings for app
 -routes.js assign each route to its corresponding function in the controllers.
